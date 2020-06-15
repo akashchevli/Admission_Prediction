@@ -1,0 +1,43 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Admission Predictor</title>
+<!--        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Admission Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="number" name="grescore" placeholder="GRE Score [Out of 340] eg.320" required="required" max="340" min="0"><br>
+                <input class="form-input" type="number" name="toeflscore" placeholder="TOEFL Score [Out of 120] eg.120" required="required" max="120" min="0"><br>
+                <input class="form-input" type="number" name="unirating" placeholder="University Rating eg.4" required="required" max="5.0" min="0.0" step="0.1"><br>
+                <input class="form-input" type="number" name="lor" placeholder="LOR Score [Out of 5] eg.4.2" required="required" max="5.0" min="0.0" step="0.1"><br>
+                <input class="form-input" type="number" name="cgpa" placeholder="CGPA eg.8.80" required="required" max="10.0" min="3.50" step="0.01"><br>
+                <input class="form-input" type="number" name="research" placeholder="Research eg.0 or 1" required="required" max="1"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+    <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/akashchevli/Admission_Prediction"><i class="fab fa-github fa-lg contact-icon"></i></a>
+
+           </div>
+           <p class='footer-description'>Made with ❤️ by Aakash Chevli.</p>
+       </div>
+    </body>
+</html>
