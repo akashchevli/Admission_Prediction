@@ -5,4 +5,3 @@ deploy a model on **Heroku** platform
 
 * For live demo you can visit here :- https://admission-predictors.herokuapp.com/
 
-[![Alternate Text]({'C:\Users\AKASH\Videos\Captures\Admission Predictor - Google Chrome 2020-06-15 12-33-27_Trim.mp4'} "Link Title")
